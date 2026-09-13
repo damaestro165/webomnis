@@ -1,0 +1,591 @@
+@import "tailwindcss";
+
+/* Ordina Typography Engine: Exact Framer Inter Display & Inter */
+@font-face {
+  font-family: "Inter Display";
+  src: url("https://framerusercontent.com/assets/PfdOpgzFf7N2Uye9JX7xRKYTgSc.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter Display";
+  src: url("https://framerusercontent.com/assets/qITWJ2WdG0wrgQPDb8lvnYnTXDg.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter Display";
+  src: url("https://framerusercontent.com/assets/iwWTDc49ENF2tCHbqlNARXw6Ug.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter Display";
+  src: url("https://framerusercontent.com/assets/bHYNJqzTyl2lqvmMiRRS6Y16Es.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("https://framerusercontent.com/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("https://framerusercontent.com/assets/UjlFhCnUjxhNfep4oYBPqnEssyo.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("https://framerusercontent.com/assets/yDtI2UI8XcEg1W2je9XPN3Noo.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("https://framerusercontent.com/assets/syRNPWzAMIrcJ3wIlPIP43KjQs.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@layer base {
+  html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: 'cv02' on, 'cv03' on, 'cv04' on, 'cv09' on, 'cv11' on;
+    letter-spacing: -0.012em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Inter Display', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+    font-feature-settings: 'cv02' on, 'cv03' on, 'cv04' on, 'cv09' on, 'cv11' on;
+  }
+
+  p, span, a, button, input, textarea {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: 'cv02' on, 'cv03' on, 'cv04' on, 'cv09' on, 'cv11' on;
+  }
+}
+
+/* Custom Ordina-inspired Animations & Spring Easings */
+:root {
+  --ordina-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ordina-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes ordina-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes ordina-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes ambient-sweep {
+  0%, 100% {
+    transform: translate3d(-50%, 0, 0) scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translate3d(-46%, 18px, 0) scale(1.06);
+    opacity: 1;
+  }
+}
+
+@keyframes ambient-drift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(34px, -18px, 0) scale(1.08);
+  }
+}
+
+@keyframes fill-bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes surface-sheen {
+  0% {
+    transform: translate3d(-120%, -20%, 0) rotate(12deg);
+  }
+  100% {
+    transform: translate3d(120%, 20%, 0) rotate(12deg);
+  }
+}
+
+@keyframes chart-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes chart-area-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cascade-word {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0.9em, 0) rotateX(18deg);
+    filter: blur(6px);
+    clip-path: inset(0 0 100% 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateX(0deg);
+    filter: blur(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes motion-track {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes motion-track-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes card-breathe {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes dashboard-step-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(-12px, 8px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 38s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+.animate-ordina-reveal {
+  animation: ordina-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+  animation: float-subtle 4.5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-subtle 5.5s ease-in-out 1.5s infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-ambient-sweep {
+  animation: ambient-sweep 14s ease-in-out infinite;
+}
+
+.animate-ambient-drift {
+  animation: ambient-drift 18s ease-in-out infinite;
+}
+
+.animate-fill-bar {
+  animation: fill-bar 1.15s var(--ordina-ease) 1s both;
+}
+
+.motion-rise,
+.motion-pop,
+.motion-card {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.motion-rise {
+  animation: ordina-fade-up 0.9s var(--ordina-ease) forwards;
+}
+
+.motion-pop {
+  animation: ordina-pop 0.7s var(--ordina-spring) forwards;
+}
+
+.motion-card {
+  animation: ordina-fade-up 0.95s var(--ordina-ease) forwards;
+}
+
+.motion-delay-1 {
+  animation-delay: 120ms;
+}
+
+.motion-delay-2 {
+  animation-delay: 220ms;
+}
+
+.motion-delay-3 {
+  animation-delay: 320ms;
+}
+
+.motion-delay-4 {
+  animation-delay: 460ms;
+}
+
+.motion-delay-5 {
+  animation-delay: 560ms;
+}
+
+.motion-delay-6 {
+  animation-delay: 660ms;
+}
+
+.reveal-motion {
+  opacity: 0;
+  transform: translateY(30px) scale(0.985);
+  transition:
+    opacity 0.85s var(--ordina-ease),
+    transform 0.85s var(--ordina-ease);
+  will-change: transform, opacity;
+}
+
+.reveal-motion.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.reveal-motion .reveal-stagger-card {
+  opacity: 0;
+  transform: translateY(24px) scale(0.985);
+  transition:
+    opacity 0.75s var(--ordina-ease),
+    transform 0.75s var(--ordina-ease),
+    border-color 0.3s var(--ordina-ease),
+    box-shadow 0.3s var(--ordina-ease);
+}
+
+.reveal-motion.is-visible .reveal-stagger-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.animated-surface::after {
+  content: "";
+  position: absolute;
+  inset: -45%;
+  width: 80%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  animation: surface-sheen 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.chart-line-motion {
+  stroke-dasharray: 460;
+  stroke-dashoffset: 460;
+  animation: chart-draw 1.35s var(--ordina-ease) 0.35s forwards;
+}
+
+.chart-area-motion {
+  transform-origin: bottom;
+  animation: chart-area-in 0.8s var(--ordina-ease) 0.55s both;
+}
+
+.text-cascade {
+  display: inline;
+  perspective: 1000px;
+}
+
+.text-cascade .word {
+  display: inline-block;
+  margin-right: 0.22em;
+  opacity: 0;
+  transform-origin: 50% 100%;
+  will-change: transform, opacity, filter, clip-path;
+}
+
+.text-cascade .word::selection {
+  background: #01283C;
+  color: #CBFF97;
+}
+
+.text-cascade .word:last-child {
+  margin-right: 0;
+}
+
+.text-cascade.is-visible .word,
+.reveal-motion.is-visible .text-cascade .word {
+  animation: cascade-word 0.78s var(--ordina-ease) forwards;
+  animation-delay: calc(90ms + (var(--word-index) * 42ms));
+}
+
+.motion-track {
+  width: max-content;
+  animation: motion-track 34s linear infinite;
+  will-change: transform;
+}
+
+.motion-track-reverse {
+  animation-name: motion-track-reverse;
+  animation-duration: 42s;
+}
+
+.motion-track:hover,
+.motion-track-reverse:hover {
+  animation-play-state: paused;
+}
+
+.moving-showcase-card {
+  width: min(78vw, 360px);
+  flex: 0 0 auto;
+}
+
+.dashboard-step {
+  opacity: 0;
+  animation: dashboard-step-in 0.72s var(--ordina-ease) 900ms forwards;
+  will-change: transform, opacity;
+}
+
+.dashboard-step-delay-1 {
+  animation-delay: 1040ms;
+}
+
+.dashboard-step-delay-2 {
+  animation-delay: 1180ms;
+}
+
+/* Ordina Soft Crisp Card & Border Utilities */
+.ordina-card {
+  background: #ffffff;
+  border: 1px solid #F0F0F0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.015), 0 4px 16px 0 rgba(0, 0, 0, 0.02);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ordina-card.rounded-3xl,
+.ordina-card-dark.rounded-3xl,
+.motion-card.rounded-3xl,
+.moving-showcase-card.rounded-2xl {
+  border-radius: 1.25rem;
+}
+
+.rounded-\[36px\].animated-surface {
+  border-radius: 1.5rem;
+}
+
+.ordina-card:hover {
+  border-color: #E2E8F0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -6px rgba(1, 40, 60, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.reveal-motion.is-visible .reveal-stagger-card.ordina-card:hover {
+  transform: translateY(-2px);
+}
+
+.ordina-card-dark {
+  background: #01283C;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+}
+
+.ordina-card-dark.rounded-\[36px\] {
+  border-radius: 1.5rem;
+}
+
+.moving-showcase-card:hover {
+  box-shadow: 0 12px 28px -12px rgba(1, 40, 60, 0.12);
+}
+
+.ordina-pill {
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.375rem 0.875rem;
+  border: 1px solid #F0F0F0;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+/* Orbital Rotating Showcase Keyframes */
+@keyframes orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-counter {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-orbit {
+  animation: orbit-spin 48s linear infinite;
+}
+
+.animate-orbit-counter {
+  animation: orbit-counter 48s linear infinite;
+}
+
+.animate-orbit:hover,
+.animate-orbit:hover .animate-orbit-counter {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal-motion,
+  .reveal-motion .reveal-stagger-card,
+  .motion-rise,
+  .motion-pop,
+  .motion-card,
+  .text-cascade .word {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
