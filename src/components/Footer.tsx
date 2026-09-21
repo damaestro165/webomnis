@@ -43,52 +43,52 @@ export const Footer: React.FC = () => {
   const tickerItems = [...footerTicker, ...footerTicker, ...footerTicker]
 
   return (
-    <footer className="bg-[#FAFAFA] border-t border-[#EAEAEA] pt-16 pb-12 overflow-hidden">
+    <footer className="bg-[#EEEBFF] border-t border-[#DDD4F5] pt-16 pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Contact Info & Office Card (Ordina Card Style) */}
-        <div className="ordina-card rounded-3xl p-8 sm:p-10 mb-16 animated-surface relative overflow-hidden">
+        <div className="ordina-card rounded-3xl p-8 sm:p-10 mb-16 animated-surface relative overflow-hidden bg-white border border-[#DDD4F5]">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Office HQ */}
             <div className="flex items-start gap-4 reveal-stagger-card">
-              <div className="w-11 h-11 rounded-2xl bg-[#01283C] text-[#CBFF97] flex items-center justify-center shrink-0 shadow-sm">
+              <div className="w-11 h-11 rounded-2xl bg-[#6754E9] text-white flex items-center justify-center shrink-0 shadow-sm">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Global Headquarters</h4>
-                <p className="text-sm font-bold text-[#083247] leading-snug">
-                  452 Innovation Blvd, Tech Hub<br />
-                  London, EC2A 4NE & New York, NY
+                <h4 className="text-xs font-bold text-[#5B5370] uppercase tracking-wider mb-1">Our Location</h4>
+                <p className="text-sm font-bold text-[#130B2B] leading-snug">
+                  Lagos, Nigeria<br />
+                  Serving Businesses Worldwide
                 </p>
               </div>
             </div>
 
             {/* Direct Email */}
             <div className="flex items-start gap-4 reveal-stagger-card">
-              <div className="w-11 h-11 rounded-2xl bg-[#01283C] text-[#CBFF97] flex items-center justify-center shrink-0 shadow-sm">
+              <div className="w-11 h-11 rounded-2xl bg-[#6754E9] text-white flex items-center justify-center shrink-0 shadow-sm">
                 <Mail className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Direct Inquiries</h4>
-                <a href="mailto:hello@webomnis.agency" className="text-sm font-bold text-[#083247] hover:underline leading-snug">
-                  hello@webomnis.agency
+                <h4 className="text-xs font-bold text-[#5B5370] uppercase tracking-wider mb-1">Direct Email</h4>
+                <a href="mailto:hello@webomnis.com" className="text-sm font-bold text-[#130B2B] hover:text-[#6754E9] hover:underline leading-snug">
+                  hello@webomnis.com
                 </a>
-                <p className="text-xs text-slate-500 mt-1">Average response time: &lt; 2 hours</p>
+                <p className="text-xs text-[#5B5370] mt-1">Average response time: &lt; 2 hours</p>
               </div>
             </div>
 
             {/* Call Line */}
             <div className="flex items-start gap-4 reveal-stagger-card">
-              <div className="w-11 h-11 rounded-2xl bg-[#01283C] text-[#CBFF97] flex items-center justify-center shrink-0 shadow-sm">
+              <div className="w-11 h-11 rounded-2xl bg-[#6754E9] text-white flex items-center justify-center shrink-0 shadow-sm">
                 <Phone className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Telephone</h4>
-                <a href="tel:+18005550199" className="text-sm font-bold text-[#083247] hover:underline leading-snug">
-                  +1 (800) 555-0199
+                <h4 className="text-xs font-bold text-[#5B5370] uppercase tracking-wider mb-1">Phone & WhatsApp</h4>
+                <a href="tel:+2348021173032" className="text-sm font-bold text-[#130B2B] hover:text-[#6754E9] hover:underline leading-snug">
+                  +234-802-117-3032
                 </a>
-                <p className="text-xs text-slate-500 mt-1">Mon-Fri, 8am-7pm EST</p>
+                <p className="text-xs text-[#5B5370] mt-1">Available Mon-Sat for client calls</p>
               </div>
             </div>
 
@@ -101,68 +101,68 @@ export const Footer: React.FC = () => {
           {/* Brand Col */}
           <div className="col-span-2">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-[#01283C] flex items-center justify-center text-[#CBFF97] font-bold">
+              <div className="w-8 h-8 rounded-lg bg-[#6754E9] flex items-center justify-center text-white font-bold">
                 <span className="text-base font-black">W</span>
               </div>
-              <span className="text-lg font-bold text-[#083247] tracking-tight">
+              <span className="text-lg font-bold text-[#130B2B] tracking-tight">
                 WebOmnis
               </span>
             </div>
-            <p className="text-slate-500 text-xs sm:text-sm max-w-sm leading-relaxed mb-6">
-              Built for performance. Designed for growth. WebOmnis is an elite website development agency dedicated to turning visitors into customers.
+            <p className="text-[#5B5370] text-xs sm:text-sm max-w-sm leading-relaxed mb-6">
+              We build fast, beautiful websites and online stores that turn visitors into phone calls, appointments, and paying customers.
             </p>
-            <div className="flex items-center gap-2 text-xs font-semibold text-[#083247] bg-white px-3 py-1.5 rounded-full w-fit border border-[#EAEAEA] shadow-sm">
+            <div className="flex items-center gap-2 text-xs font-semibold text-[#130B2B] bg-white px-3 py-1.5 rounded-full w-fit border border-[#DDD4F5] shadow-sm">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>All Systems Operational</span>
+              <span>Available for New Projects</span>
             </div>
           </div>
 
           {/* Col 1: Solutions */}
           <div>
-            <h5 className="text-xs font-bold uppercase tracking-wider text-[#083247] mb-4">Solutions</h5>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-500">
-              <li><a href="#services" className="hover:text-[#01283C] transition-colors">Custom Web Apps</a></li>
-              <li><a href="#services" className="hover:text-[#01283C] transition-colors">Headless Commerce</a></li>
-              <li><a href="#services" className="hover:text-[#01283C] transition-colors">UI/UX Design Systems</a></li>
-              <li><a href="#services" className="hover:text-[#01283C] transition-colors">Core Web Vitals Audit</a></li>
-              <li><a href="#services" className="hover:text-[#01283C] transition-colors">Cloud Migrations</a></li>
+            <h5 className="text-xs font-bold uppercase tracking-wider text-[#130B2B] mb-4">Services</h5>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-[#5B5370]">
+              <li><a href="#services" className="hover:text-[#6754E9] transition-colors">Business Websites</a></li>
+              <li><a href="#services" className="hover:text-[#6754E9] transition-colors">Online Stores</a></li>
+              <li><a href="#services" className="hover:text-[#6754E9] transition-colors">Website Redesign</a></li>
+              <li><a href="#services" className="hover:text-[#6754E9] transition-colors">Speed & Google SEO</a></li>
+              <li><a href="#services" className="hover:text-[#6754E9] transition-colors">Mobile Optimization</a></li>
             </ul>
           </div>
 
           {/* Col 2: Company */}
           <div>
-            <h5 className="text-xs font-bold uppercase tracking-wider text-[#083247] mb-4">Company</h5>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-500">
-              <li><a href="#why-us" className="hover:text-[#01283C] transition-colors">Why WebOmnis</a></li>
-              <li><a href="#work" className="hover:text-[#01283C] transition-colors">Client Case Studies</a></li>
-              <li><a href="#process" className="hover:text-[#01283C] transition-colors">Our 4-Step Process</a></li>
-              <li><a href="#faq" className="hover:text-[#01283C] transition-colors">Common Questions</a></li>
-              <li><a href="#contact" className="hover:text-[#01283C] transition-colors">Contact Support</a></li>
+            <h5 className="text-xs font-bold uppercase tracking-wider text-[#130B2B] mb-4">Company</h5>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-[#5B5370]">
+              <li><a href="#why-us" className="hover:text-[#6754E9] transition-colors">Why WebOmnis</a></li>
+              {/* <li><a href="#work" className="hover:text-[#6754E9] transition-colors">Client Case Studies</a></li> */}
+              <li><a href="#process" className="hover:text-[#6754E9] transition-colors">Our 4-Step Process</a></li>
+              <li><a href="#faq" className="hover:text-[#6754E9] transition-colors">Common Questions</a></li>
+              <li><a href="#contact" className="hover:text-[#6754E9] transition-colors">Contact Us</a></li>
             </ul>
           </div>
 
           {/* Col 3: Legal */}
           <div>
-            <h5 className="text-xs font-bold uppercase tracking-wider text-[#083247] mb-4">Governance</h5>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-500">
-              <li><a href="#" className="hover:text-[#01283C] transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-[#01283C] transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-[#01283C] transition-colors">NDA Guarantee</a></li>
-              <li><a href="#" className="hover:text-[#01283C] transition-colors">Security & SLA</a></li>
-              <li><a href="#" className="hover:text-[#01283C] transition-colors">Cookie Preferences</a></li>
+            <h5 className="text-xs font-bold uppercase tracking-wider text-[#130B2B] mb-4">Governance</h5>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-[#5B5370]">
+              <li><a href="#" className="hover:text-[#6754E9] transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-[#6754E9] transition-colors">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-[#6754E9] transition-colors">NDA Guarantee</a></li>
+              <li><a href="#" className="hover:text-[#6754E9] transition-colors">Security & SLA</a></li>
+              <li><a href="#" className="hover:text-[#6754E9] transition-colors">Cookie Preferences</a></li>
             </ul>
           </div>
 
         </div>
 
-        <div className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-10 py-4 border-y border-[#EAEAEA] bg-white overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        <div className="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-10 py-4 border-y border-[#DDD4F5] bg-[#F8F6FF] overflow-hidden">
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#F8F6FF] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#F8F6FF] to-transparent z-10 pointer-events-none" />
           <div className="motion-track flex items-center gap-8">
             {tickerItems.map((item, index) => (
               <span
                 key={`${item}-${index}`}
-                className="shrink-0 text-[11px] font-bold uppercase tracking-wider text-[#083247]/70"
+                className="shrink-0 text-[11px] font-bold uppercase tracking-wider text-[#130B2B]/70"
               >
                 {item}
               </span>
@@ -171,20 +171,20 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar: Copyright & Socials */}
-        <div className="pt-8 border-t border-[#EAEAEA] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="pt-8 border-t border-[#DDD4F5] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#5B5370]">
           <p>Copyright 2026 WebOmnis / Built for performance. Designed for growth.</p>
           
-          <div className="flex items-center gap-3 text-slate-500">
-            <a href="#" className="p-2 rounded-full border border-[#EAEAEA] bg-white hover:bg-[#01283C] hover:text-white transition-all" aria-label="Twitter">
+          <div className="flex items-center gap-3 text-[#5B5370]">
+            <a href="#" className="p-2 rounded-full border border-[#DDD4F5] bg-white hover:bg-[#6754E9] hover:border-[#6754E9] hover:text-white transition-all" aria-label="Twitter">
               <TwitterIcon className="w-3.5 h-3.5" />
             </a>
-            <a href="#" className="p-2 rounded-full border border-[#EAEAEA] bg-white hover:bg-[#01283C] hover:text-white transition-all" aria-label="LinkedIn">
+            <a href="#" className="p-2 rounded-full border border-[#DDD4F5] bg-white hover:bg-[#6754E9] hover:border-[#6754E9] hover:text-white transition-all" aria-label="LinkedIn">
               <LinkedinIcon className="w-3.5 h-3.5" />
             </a>
-            <a href="#" className="p-2 rounded-full border border-[#EAEAEA] bg-white hover:bg-[#01283C] hover:text-white transition-all" aria-label="GitHub">
+            <a href="#" className="p-2 rounded-full border border-[#DDD4F5] bg-white hover:bg-[#6754E9] hover:border-[#6754E9] hover:text-white transition-all" aria-label="GitHub">
               <GithubIcon className="w-3.5 h-3.5" />
             </a>
-            <a href="#" className="p-2 rounded-full border border-[#EAEAEA] bg-white hover:bg-[#01283C] hover:text-white transition-all" aria-label="Dribbble">
+            <a href="#" className="p-2 rounded-full border border-[#DDD4F5] bg-white hover:bg-[#6754E9] hover:border-[#6754E9] hover:text-white transition-all" aria-label="Dribbble">
               <DribbbleIcon className="w-3.5 h-3.5" />
             </a>
           </div>

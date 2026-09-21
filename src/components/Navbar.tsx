@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ArrowRight, Menu, X, Globe, Sparkles } from 'lucide-react'
+import { ArrowRight, Menu, X, Mail, Phone } from 'lucide-react'
 
 interface NavbarProps {
   onOpenConsultation?: () => void
@@ -7,29 +7,42 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-[#01283C]/90 border-b border-[#083247] transition-all">
-      {/* Top Announcement Bar */}
-      <div className="bg-[#083247] text-white text-xs py-2 px-4 border-b border-white/5">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 bg-white/10 text-[#CBFF97] px-2.5 py-0.5 rounded-full text-[11px] font-semibold border border-white/10">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#CBFF97] animate-pulse"></span>
-              Q3/Q4 Availability
-            </span>
-            <span className="hidden sm:inline text-slate-300 font-medium text-xs">
-              Now accepting new web development & redesign projects
-            </span>
-          </div>
-          <div className="flex items-center gap-4 text-slate-300 text-xs">
-            <span className="hidden md:inline-flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#CBFF97]"></span> All Systems Operational
-            </span>
-            <a href="mailto:hello@webomnis.agency" className="text-white hover:text-[#CBFF97] transition-colors font-medium">
-              hello@webomnis.agency
-            </a>
-          </div>
+    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-[#EEEBFF]/95 border-b border-[#DDD4F5] transition-all shadow-xs">
+      {/* Top Contact Bar matching reference design */}
+      <div className="bg-white/90 border-b border-[#DDD4F5] py-2 px-4 sm:px-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+          {/* Email Us */}
+          <a 
+            href="mailto:hello@webomnis.com" 
+            className="flex items-center gap-2.5 group transition-colors"
+          >
+            <div className="w-8 h-8 rounded-full bg-[#EEEBFF] border border-[#DDD4F5] flex items-center justify-center text-[#6754E9] group-hover:bg-[#6754E9] group-hover:text-white transition-colors shrink-0">
+              <Mail className="w-4 h-4" />
+            </div>
+            <div className="flex flex-col text-left">
+              <span className="text-[11px] font-medium text-[#5B5370] leading-none">Email Us</span>
+              <span className="text-xs sm:text-sm font-bold text-[#130B2B] group-hover:text-[#6754E9] transition-colors leading-tight">
+                hello@webomnis.com
+              </span>
+            </div>
+          </a>
+
+          {/* Get a Proposal / Phone */}
+          <a 
+            href="tel:+2348021173032" 
+            className="flex items-center gap-2.5 group transition-colors"
+          >
+            <div className="w-8 h-8 rounded-full bg-[#EEEBFF] border border-[#DDD4F5] flex items-center justify-center text-[#6754E9] group-hover:bg-[#6754E9] group-hover:text-white transition-colors shrink-0">
+              <Phone className="w-4 h-4" />
+            </div>
+            <div className="flex flex-col text-left">
+              <span className="text-[11px] font-medium text-[#5B5370] leading-none">Get a Proposal</span>
+              <span className="text-xs sm:text-sm font-bold text-[#130B2B] group-hover:text-[#6754E9] transition-colors leading-tight">
+                +234-802-117-3032
+              </span>
+            </div>
+          </a>
         </div>
       </div>
 
@@ -37,23 +50,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
         {/* Brand Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-[#CBFF97] shadow-sm group-hover:scale-105 transition-transform duration-300">
+          <div className="w-9 h-9 rounded-xl bg-[#6754E9] text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
             <span className="text-base font-black">W</span>
           </div>
-          <span className="text-xl font-bold tracking-tight text-white flex items-center">
+          <span className="text-xl font-bold tracking-tight text-[#130B2B] flex items-center">
             WebOmnis
           </span>
         </a>
 
-        {/* Desktop Links (Ordina Style Clean Nav) */}
-        <div className="hidden lg:flex items-center gap-7 text-[13px] font-medium text-slate-300">
-          <a href="#about" className="hover:text-white transition-colors">About</a>
-          <a href="#services" className="hover:text-white transition-colors">Services</a>
-          <a href="#process" className="hover:text-white transition-colors">Process</a>
-          <a href="#why-us" className="hover:text-white transition-colors">Why Us</a>
-          <a href="#work" className="hover:text-white transition-colors">Work</a>
-          <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
-          <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+        {/* Desktop Links */}
+        <div className="hidden lg:flex items-center gap-7 text-[13px] font-medium text-[#5B5370]">
+          <a href="#about" className="hover:text-[#6754E9] transition-colors">About</a>
+          <a href="#services" className="hover:text-[#6754E9] transition-colors">Services</a>
+          <a href="#process" className="hover:text-[#6754E9] transition-colors">Process</a>
+          <a href="#why-us" className="hover:text-[#6754E9] transition-colors">Why Us</a>
+          {/* <a href="#work" className="hover:text-[#6754E9] transition-colors">Work</a> */}
+          <a href="#faq" className="hover:text-[#6754E9] transition-colors">FAQ</a>
+          <a href="#contact" className="hover:text-[#6754E9] transition-colors">Contact</a>
         </div>
 
         {/* Action Button */}
@@ -61,10 +74,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
           <a 
             href="#contact"
             onClick={onOpenConsultation}
-            className="group relative inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#CBFF97] hover:bg-[#bdfd7f] text-[#01283C] text-[13px] font-bold transition-all duration-300 shadow-sm active:scale-98"
+            className="group relative inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#6754E9] hover:bg-[#5542D0] text-white text-[13px] font-bold transition-all duration-300 shadow-sm shadow-[#6754E9]/20 active:scale-98"
           >
             <span>Start a Project</span>
-            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform text-[#01283C]" />
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform text-white" />
           </a>
         </div>
 
@@ -72,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
         <div className="lg:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-xl text-white hover:bg-white/10 focus:outline-none"
+            className="p-2 rounded-xl text-[#130B2B] hover:bg-[#DDD4F5]/50 focus:outline-none"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -82,54 +95,54 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-indigo-100 px-6 py-5 shadow-xl animate-in slide-in-from-top-2">
+        <div className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-[#DDD4F5] px-6 py-5 shadow-xl animate-in slide-in-from-top-2">
           <div className="flex flex-col gap-4 font-medium text-slate-700">
             <a 
               href="#about" 
               onClick={() => setMobileMenuOpen(false)}
-              className="py-2 hover:text-indigo-600 transition-colors border-b border-slate-100"
+              className="py-2 hover:text-[#6754E9] transition-colors border-b border-slate-100"
             >
               About
             </a>
             <a 
               href="#services" 
               onClick={() => setMobileMenuOpen(false)}
-              className="py-2 hover:text-indigo-600 transition-colors border-b border-slate-100"
+              className="py-2 hover:text-[#6754E9] transition-colors border-b border-slate-100"
             >
               Services
             </a>
             <a 
               href="#process" 
               onClick={() => setMobileMenuOpen(false)}
-              className="py-2 hover:text-indigo-600 transition-colors border-b border-slate-100"
+              className="py-2 hover:text-[#6754E9] transition-colors border-b border-slate-100"
             >
               Process
             </a>
             <a 
               href="#why-us" 
               onClick={() => setMobileMenuOpen(false)}
-              className="py-2 hover:text-indigo-600 transition-colors border-b border-slate-100"
+              className="py-2 hover:text-[#6754E9] transition-colors border-b border-slate-100"
             >
               Why Us
             </a>
-            <a 
+            {/* <a 
               href="#work" 
               onClick={() => setMobileMenuOpen(false)}
-              className="py-2 hover:text-indigo-600 transition-colors border-b border-slate-100"
+              className="py-2 hover:text-[#6754E9] transition-colors border-b border-slate-100"
             >
               Work
-            </a>
+            </a> */}
             <a 
               href="#faq" 
               onClick={() => setMobileMenuOpen(false)}
-              className="py-2 hover:text-indigo-600 transition-colors border-b border-slate-100"
+              className="py-2 hover:text-[#6754E9] transition-colors border-b border-slate-100"
             >
               FAQ
             </a>
             <a 
               href="#contact" 
               onClick={() => setMobileMenuOpen(false)}
-              className="py-2 hover:text-indigo-600 transition-colors"
+              className="py-2 hover:text-[#6754E9] transition-colors"
             >
               Contact
             </a>
@@ -138,7 +151,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
                 setMobileMenuOpen(false)
                 if (onOpenConsultation) onOpenConsultation()
               }}
-              className="w-full mt-2 py-3 rounded-xl bg-[#0F172A] text-white text-center font-semibold text-sm shadow-md"
+              className="w-full mt-2 py-3 rounded-xl bg-[#6754E9] hover:bg-[#5542D0] text-white text-center font-semibold text-sm shadow-md"
             >
               Schedule a Consultation
             </button>

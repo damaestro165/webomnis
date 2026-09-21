@@ -91,43 +91,43 @@ export const vitalsConfig = {
   }
 
   return (
-    <section className="py-24 sm:py-32 bg-[#01283C] text-white relative overflow-hidden border-y border-[#083247]">
+    <section className="py-24 sm:py-32 bg-[#130B2B] text-white relative overflow-hidden border-y border-[#25164E]">
       
       {/* Background ambient lighting glows */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#006092]/25 rounded-full blur-[120px] pointer-events-none -z-10" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#CBFF97]/5 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#6754E9]/20 rounded-full blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#6754E9]/15 rounded-full blur-[140px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header (Ordina Editorial 2-Tone Typography on Dark) */}
         <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-[#CBFF97] mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#CBFF97] animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-[#C4B5FD] mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C4B5FD] animate-pulse" />
             <span>Automated Systems & Architecture</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] mb-5">
             Automated workflows.{' '}
-            <span className="text-slate-400 font-normal block sm:inline">
+            <span className="text-purple-200/60 font-normal block sm:inline">
               Built for high-volume scale.
             </span>
           </h2>
 
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
+          <p className="text-purple-100/80 text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
             We eliminate manual bottlenecks by wiring your frontend to robust backend automations, from instant payment orchestration to real-time CRM routing.
           </p>
         </div>
 
         {/* Tab Selection Row */}
-        <div className="flex flex-wrap gap-2.5 p-1.5 bg-[#083247]/70 rounded-2xl border border-white/10 w-fit mb-10">
+        <div className="flex flex-wrap gap-2.5 p-1.5 bg-white/5 rounded-2xl border border-white/10 w-fit mb-10">
           {workflows.map((wf, idx) => (
             <button
               key={wf.id}
               onClick={() => setActiveTab(idx)}
               className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer flex items-center gap-2 ${
                 activeTab === idx
-                  ? 'bg-white text-[#01283C] shadow-sm'
-                  : 'text-slate-300 hover:text-white hover:bg-white/5'
+                  ? 'bg-[#6754E9] text-white shadow-sm'
+                  : 'text-purple-200/70 hover:text-white hover:bg-white/5'
               }`}
             >
               <span>{wf.title}</span>
@@ -136,13 +136,13 @@ export const vitalsConfig = {
         </div>
 
         {/* Main Interactive Workflow Display Card */}
-        <div className="ordina-card-dark rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl relative overflow-hidden bg-gradient-to-b from-[#083247]/80 to-[#01283C]">
+        <div className="ordina-card-dark rounded-3xl p-6 sm:p-10 border border-[#25164E] shadow-2xl relative overflow-hidden bg-gradient-to-b from-[#1C123D]/90 to-[#130B2B]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Column: Details & Verified Metrics */}
             <div className="lg:col-span-6 flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-2 text-xs font-bold text-[#CBFF97] uppercase tracking-wider mb-2">
+                <div className="flex items-center gap-2 text-xs font-bold text-[#C4B5FD] uppercase tracking-wider mb-2">
                   <CurrentIcon className="w-4 h-4" />
                   <span>{current.subtitle}</span>
                 </div>
@@ -151,7 +151,7 @@ export const vitalsConfig = {
                   {current.title}
                 </h3>
 
-                <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+                <p className="text-purple-100/80 text-sm sm:text-base leading-relaxed mb-8">
                   {current.desc}
                 </p>
 
@@ -159,7 +159,7 @@ export const vitalsConfig = {
                 <div className="grid grid-cols-3 gap-3 mb-8">
                   {current.metrics.map((m, mIdx) => (
                     <div key={mIdx} className="p-3.5 rounded-2xl bg-white/5 border border-white/10">
-                      <div className="text-[11px] text-slate-400 font-medium">{m.label}</div>
+                      <div className="text-[11px] text-purple-200/60 font-medium">{m.label}</div>
                       <div className="text-base sm:text-lg font-bold text-white font-mono mt-0.5">
                         {renderMetricValue(m.val)}
                       </div>
@@ -171,18 +171,18 @@ export const vitalsConfig = {
               <div className="pt-6 border-t border-white/10 flex items-center justify-between">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#CBFF97] hover:underline"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-[#C4B5FD] hover:underline"
                 >
                   <span>Request Custom Automation Scope</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
-                <span className="text-[11px] text-slate-400">Zero Technical Debt</span>
+                <span className="text-[11px] text-purple-200/60">Zero Technical Debt</span>
               </div>
             </div>
 
             {/* Right Column: Clean Code / Architecture Blueprint Window */}
             <div className="lg:col-span-6">
-              <div className="rounded-2xl bg-[#041c2b] border border-white/10 shadow-inner overflow-hidden font-mono text-xs">
+              <div className="rounded-2xl bg-[#0B061A] border border-white/10 shadow-inner overflow-hidden font-mono text-xs">
                 {/* Window header */}
                 <div className="flex items-center justify-between px-4 py-3 bg-white/5 border-b border-white/10">
                   <div className="flex items-center gap-1.5">

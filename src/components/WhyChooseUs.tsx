@@ -26,33 +26,33 @@ export const WhyChooseUs: React.FC = () => {
   const activeData = activeQuarter === 'Q4' ? chartDataQ4 : chartDataQ3
 
   return (
-    <section id="why-us" className="py-20 md:py-28 bg-white relative overflow-hidden">
+    <section id="why-us" className="py-20 md:py-28 bg-[#EEEBFF] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Column: Interactive Analytics Dashboard Card (Ordina Card Style) */}
+          {/* Left Column: Interactive Analytics Dashboard Card */}
           <div className="lg:col-span-6">
-            <div className="ordina-card p-6 sm:p-8 rounded-3xl relative animated-surface">
+            <div className="ordina-card p-6 sm:p-8 rounded-3xl relative animated-surface bg-white border border-[#DDD4F5]">
               
               {/* Dashboard Header */}
-              <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#F0F0F0]">
+              <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#DDD4F5]">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#083247]">
-                    Live Performance
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#6754E9]">
+                    Growth Tracking
                   </span>
-                  <h4 className="text-lg font-bold text-[#083247] mt-0.5">
-                    {activeQuarter} Web Metrics & Growth
+                  <h4 className="text-lg font-bold text-[#130B2B] mt-0.5">
+                    {activeQuarter} Customer Inquiries & Growth
                   </h4>
                 </div>
                 
                 {/* Quarter Switcher */}
-                <div className="inline-flex rounded-full bg-[#FAFAFA] p-1 border border-[#EAEAEA] text-xs font-semibold">
+                <div className="inline-flex rounded-full bg-[#F8F6FF] p-1 border border-[#DDD4F5] text-xs font-semibold">
                   <button
                     onClick={() => setActiveQuarter('Q3')}
                     className={`px-3 py-1 rounded-full transition-all cursor-pointer ${
                       activeQuarter === 'Q3'
-                        ? 'bg-[#01283C] text-white shadow-sm'
-                        : 'text-slate-600 hover:text-[#01283C]'
+                        ? 'bg-[#6754E9] text-white shadow-sm'
+                        : 'text-[#5B5370] hover:text-[#130B2B]'
                     }`}
                   >
                     Q3
@@ -61,8 +61,8 @@ export const WhyChooseUs: React.FC = () => {
                     onClick={() => setActiveQuarter('Q4')}
                     className={`px-3 py-1 rounded-full transition-all cursor-pointer ${
                       activeQuarter === 'Q4'
-                        ? 'bg-[#01283C] text-white shadow-sm'
-                        : 'text-slate-600 hover:text-[#01283C]'
+                        ? 'bg-[#6754E9] text-white shadow-sm'
+                        : 'text-[#5B5370] hover:text-[#130B2B]'
                     }`}
                   >
                     Q4
@@ -73,38 +73,38 @@ export const WhyChooseUs: React.FC = () => {
               {/* Stat Highlight Pill */}
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <div className="text-3xl sm:text-4xl font-extrabold text-[#083247] tracking-tight">
-                    {activeQuarter === 'Q4' ? '+145.8%' : '+112.4%'}
+                  <div className="text-3xl sm:text-4xl font-extrabold text-[#130B2B] tracking-tight">
+                    {activeQuarter === 'Q4' ? '+145%' : '+112%'}
                   </div>
                   <p className="text-xs font-semibold text-emerald-600 flex items-center gap-1 mt-1">
-                    <span>Peak Conversion Velocity</span>
-                    <span className="text-slate-400 font-normal">vs previous period</span>
+                    <span>More Phone Calls & Quotes</span>
+                    <span className="text-[#8C85A3] font-normal">vs old website</span>
                   </p>
                 </div>
                 <div className="text-right">
-                  <div className="text-xs font-bold text-slate-400 uppercase">Avg Page Speed</div>
-                  <div className="text-xl font-bold text-[#083247]">0.42s</div>
+                  <div className="text-xs font-bold text-[#8C85A3] uppercase">Avg Mobile Load</div>
+                  <div className="text-xl font-bold text-[#130B2B]">0.8s</div>
                 </div>
               </div>
 
               {/* Responsive SVG Chart */}
-              <div className="w-full h-48 sm:h-56 relative bg-[#FAFAFA] rounded-2xl p-4 border border-[#EAEAEA] flex flex-col justify-between">
+              <div className="w-full h-48 sm:h-56 relative bg-[#F8F6FF] rounded-2xl p-4 border border-[#DDD4F5] flex flex-col justify-between">
                 <svg className="w-full h-full overflow-visible" viewBox="0 0 320 120">
                   <defs>
                     <linearGradient id="chartArea" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#006092" stopOpacity="0.25" />
-                      <stop offset="100%" stopColor="#006092" stopOpacity="0.0" />
+                      <stop offset="0%" stopColor="#6754E9" stopOpacity="0.25" />
+                      <stop offset="100%" stopColor="#6754E9" stopOpacity="0.0" />
                     </linearGradient>
                     <linearGradient id="chartStroke" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#006092" />
-                      <stop offset="100%" stopColor="#01283C" />
+                      <stop offset="0%" stopColor="#6754E9" />
+                      <stop offset="100%" stopColor="#5542D0" />
                     </linearGradient>
                   </defs>
 
                   {/* Horizontal Gridlines */}
-                  <line x1="0" y1="20" x2="320" y2="20" stroke="#EAEAEA" strokeWidth="1" strokeDasharray="3 3" />
-                  <line x1="0" y1="60" x2="320" y2="60" stroke="#EAEAEA" strokeWidth="1" strokeDasharray="3 3" />
-                  <line x1="0" y1="100" x2="320" y2="100" stroke="#EAEAEA" strokeWidth="1" strokeDasharray="3 3" />
+                  <line x1="0" y1="20" x2="320" y2="20" stroke="#DDD4F5" strokeWidth="1" strokeDasharray="3 3" />
+                  <line x1="0" y1="60" x2="320" y2="60" stroke="#DDD4F5" strokeWidth="1" strokeDasharray="3 3" />
+                  <line x1="0" y1="100" x2="320" y2="100" stroke="#DDD4F5" strokeWidth="1" strokeDasharray="3 3" />
 
                   {/* Area fill */}
                   <path
@@ -146,7 +146,7 @@ export const WhyChooseUs: React.FC = () => {
                           cx={x}
                           cy={y}
                           r={isLast ? 5 : 3.5}
-                          fill={isLast ? '#01283C' : '#006092'}
+                          fill={isLast ? '#6754E9' : '#DDD4F5'}
                           stroke="#FFFFFF"
                           strokeWidth="2"
                         />
@@ -165,71 +165,71 @@ export const WhyChooseUs: React.FC = () => {
 
               {/* Bottom Insight footnote */}
               <div className="mt-4 flex items-center justify-between text-xs text-slate-500">
-                <span className="flex items-center gap-1.5 font-medium">
+                <span className="flex items-center gap-1.5 font-medium text-[#5B5370]">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block"></span>
-                  Realtime Core Web Vitals Audited
+                  Tested & Optimized on All Phones
                 </span>
-                <span className="font-bold text-[#083247]">99.8% Uptime</span>
+                <span className="font-bold text-[#130B2B]">100% Reliable</span>
               </div>
             </div>
           </div>
 
           {/* Right Column: "Why WebOmnis is your top choice" */}
           <div className="lg:col-span-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#EAEAEA] shadow-sm text-xs font-semibold text-[#01283C] mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#01283C]" />
-              <span>Value Proposition</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DDD4F5] shadow-sm text-xs font-semibold text-[#6754E9] mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#6754E9]" />
+              <span>Why Business Owners Choose Us</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold text-[#083247] tracking-tight mt-2 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-5xl font-bold text-[#130B2B] tracking-tight mt-2 mb-6 leading-tight">
               <TextCascade
                 segments={[
                   { text: 'Why WebOmnis is' },
-                  { text: 'your top choice', className: 'text-[#737373] font-normal', breakBefore: true },
+                  { text: 'the right partner for you', className: 'text-[#5B5370] font-normal', breakBefore: true },
                 ]}
               />
             </h2>
-            <p className="text-[#737373] text-sm sm:text-base leading-relaxed mb-8">
-              We eliminate traditional agency bloat. When you partner with WebOmnis, you work directly with senior architects, top-tier frontend developers, and dedicated UX specialists who understand business bottom lines.
+            <p className="text-[#5B5370] text-sm sm:text-base leading-relaxed mb-8">
+              Most web agencies overcomplicate things with technical buzzwords and slow turnarounds. We keep it simple: we build fast, attractive websites that get your phone ringing and bring in customers.
             </p>
 
             <div className="space-y-4 mb-10">
               <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-[#FAFAFA] border border-[#EAEAEA] text-[#01283C] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-6 h-6 rounded-full bg-white border border-[#DDD4F5] text-[#6754E9] flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
                   <CheckCircle className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-[#083247]">Zero Technical Debt</h4>
-                  <p className="text-xs sm:text-sm text-[#737373]">Modular, cleanly documented TypeScript codebases that your in-house team can scale effortlessly.</p>
+                  <h4 className="text-sm font-bold text-[#130B2B]">No Technical Confusion</h4>
+                  <p className="text-xs sm:text-sm text-[#5B5370]">You don&apos;t need to learn code or manage hosting. We take care of everything and communicate in plain, friendly English.</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-[#FAFAFA] border border-[#EAEAEA] text-[#01283C] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-6 h-6 rounded-full bg-white border border-[#DDD4F5] text-[#6754E9] flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
                   <Award className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-[#083247]">Guaranteed Core Web Vitals (95+)</h4>
-                  <p className="text-xs sm:text-sm text-[#737373]">Sub-second load times engineered specifically to increase organic search ranks and ad spend conversion.</p>
+                  <h4 className="text-sm font-bold text-[#130B2B]">Built to Get Calls & Inquiries</h4>
+                  <p className="text-xs sm:text-sm text-[#5B5370]">Every button, headline, and contact form is positioned to turn curious visitors into actual paying clients.</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-[#FAFAFA] border border-[#EAEAEA] text-[#01283C] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-6 h-6 rounded-full bg-white border border-[#DDD4F5] text-[#6754E9] flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
                   <Users className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-[#083247]">Direct Senior Access</h4>
-                  <p className="text-xs sm:text-sm text-[#737373]">No account managers playing telephone. Weekly sprints with the senior engineers writing your code.</p>
+                  <h4 className="text-sm font-bold text-[#130B2B]">Direct Communication</h4>
+                  <p className="text-xs sm:text-sm text-[#5B5370]">You talk directly with the person building your website. No middlemen, no account managers playing telephone.</p>
                 </div>
               </div>
             </div>
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#01283C] hover:bg-[#083247] text-white font-semibold text-xs sm:text-sm shadow-sm transition-all group"
+              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#6754E9] hover:bg-[#5542D0] text-white font-semibold text-xs sm:text-sm shadow-md shadow-[#6754E9]/20 transition-all group"
             >
-              <span>About Our Process</span>
-              <ArrowRight className="w-4 h-4 text-[#CBFF97] group-hover:translate-x-1 transition-transform" />
+              <span>Get Started Today</span>
+              <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 

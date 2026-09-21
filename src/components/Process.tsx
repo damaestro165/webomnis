@@ -1,55 +1,55 @@
 import React from 'react'
-import { Compass, Layout, Code2, Rocket, ArrowRight } from 'lucide-react'
+import { MessageSquare, Layout, CheckCircle2, Rocket, ArrowRight } from 'lucide-react'
 import { TextCascade } from './TextCascade'
 
 export const Process: React.FC = () => {
   const steps = [
     {
       num: '01',
-      name: 'Understand Your Business',
-      desc: 'We dive deep into your goals, challenges, and opportunities to identify where we can create the most commercial impact.',
-      icon: Compass
+      name: 'Chat About Your Business',
+      desc: 'We start with a friendly chat to understand your services, your ideal customers, and what you want your website to achieve.',
+      icon: MessageSquare
     },
     {
       num: '02',
-      name: 'Plan & Design',
-      desc: 'We map out a conversion-focused structure and design an experience tailored to your audience and customer psychology.',
+      name: 'We Design & Build It',
+      desc: 'We craft a clean, mobile-ready website with simple words, clear pricing or services, and easy click-to-call buttons.',
       icon: Layout
     },
     {
       num: '03',
-      name: 'Build & Optimize',
-      desc: 'Rapid, transparent engineering. We write clean, modern code while keeping you updated at every major milestone.',
-      icon: Code2
+      name: 'Review & Easy Tweaks',
+      desc: 'You test the website on your smartphone and laptop. We make any tweaks or updates you need until you are 100% happy.',
+      icon: CheckCircle2
     },
     {
       num: '04',
-      name: 'Launch & Improve',
-      desc: 'After launch, we monitor performance, load times, and customer funnels to continuously refine and maximize results.',
+      name: 'Launch & Get Customers',
+      desc: 'We connect your domain, configure your contact forms, launch the site live, and make sure local customers can find you.',
       icon: Rocket
     }
   ]
 
   return (
-    <section id="process" className="py-24 bg-[#FAFAFA] relative">
+    <section id="process" className="py-24 bg-[#ffff] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#EAEAEA] shadow-sm text-xs font-semibold text-[#01283C] mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#01283C]" />
-            <span>How We Work</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DDD4F5] shadow-sm text-xs font-semibold text-[#6754E9] mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#6754E9]" />
+            <span>How It Works</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#083247] tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-bold text-[#130B2B] tracking-tight">
             <TextCascade
               segments={[
-                { text: 'A process built for' },
-                { text: 'results.', className: 'text-[#737373] font-normal' },
+                { text: 'From Idea to Live Site in' },
+                { text: '4 Simple Steps.', className: 'text-[#5B5370] font-normal' },
               ]}
             />
           </h2>
-          <p className="text-[#737373] text-sm sm:text-base max-w-xl mt-3 leading-relaxed">
-            A streamlined 4-step framework engineered to take your website from strategic discovery to high-growth deployment.
+          <p className="text-[#5B5370] text-sm sm:text-base max-w-xl mt-3 leading-relaxed">
+            No technical confusion or complicated jargon. Just a clear, straightforward path to getting your business online.
           </p>
         </div>
 
@@ -60,28 +60,28 @@ export const Process: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="ordina-card reveal-stagger-card rounded-3xl p-7 flex flex-col justify-between group relative"
+                className="ordina-card reveal-stagger-card rounded-3xl p-7 flex flex-col justify-between group relative bg-white border border-[#DDD4F5]"
                 style={{ transitionDelay: `${idx * 90}ms` }}
               >
                 <div>
                   <div className="flex items-center justify-between mb-8">
-                    <span className="text-3xl font-extrabold text-[#01283C] group-hover:text-[#083247] transition-colors">
+                    <span className="text-3xl font-extrabold text-[#130B2B] group-hover:text-[#6754E9] transition-colors">
                       {step.num}
                     </span>
-                    <div className="w-10 h-10 rounded-2xl bg-[#FAFAFA] border border-[#EAEAEA] flex items-center justify-center text-[#01283C] group-hover:bg-[#01283C] group-hover:text-[#CBFF97] transition-colors duration-200">
+                    <div className="w-10 h-10 rounded-2xl bg-[#F8F6FF] border border-[#DDD4F5] flex items-center justify-center text-[#6754E9] group-hover:bg-[#6754E9] group-hover:text-white transition-colors duration-200">
                       <Icon className="w-4 h-4" />
                     </div>
                   </div>
 
-                  <h3 className="text-base font-bold text-[#083247] mb-2 transition-colors">
+                  <h3 className="text-base font-bold text-[#130B2B] mb-2 transition-colors">
                     {step.name}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#737373] leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#5B5370] leading-relaxed font-normal">
                     {step.desc}
                   </p>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-[#F0F0F0] flex items-center gap-1.5 text-xs font-semibold text-slate-400 group-hover:text-[#083247] transition-colors">
+                <div className="pt-6 mt-6 border-t border-[#DDD4F5] flex items-center gap-1.5 text-xs font-semibold text-[#5B5370] group-hover:text-[#6754E9] transition-colors">
                   <span>Phase {step.num}</span>
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </div>

@@ -7,24 +7,28 @@ export const FAQ: React.FC = () => {
 
   const faqs = [
     {
-      question: 'How long does a project take?',
-      answer: 'Most projects take between 2-6 weeks. Starter sites are typically delivered in 14 days. Custom web apps and e-commerce builds take 3-6 weeks. We will give you a firm timeline before we begin, and we keep you updated at every milestone so there are no surprises.'
+      question: 'How much will a website cost for my business?',
+      answer: 'We provide clear, upfront pricing with zero hidden fees. After a quick 15-minute chat to understand what your business needs (a simple professional site vs. an online store), we give you a fixed, transparent quote before starting any work.'
     },
     {
-      question: 'Will this actually increase my sales?',
-      answer: "That's exactly what we build for. Every decision, layout, copy structure, load speed, and CTAs, is made with conversion in mind. Our clients have seen results like +68% conversion rates and 2x revenue within the first month. That said, results depend on your product, traffic, and market. We'll be honest with you if we think your bottleneck isn't your website."
+      question: 'How long until my website is live?',
+      answer: 'Most standard business websites and e-commerce stores are ready in as little as 14 days. We give you an exact launch date on day one and keep you updated at each stage so you are never left guessing.'
     },
     {
-      question: 'Can you redesign an existing website?',
-      answer: "Absolutely. Redesigns are actually one of our most common projects. We start with a full audit of your current site to identify exactly what's hurting your conversions, then rebuild with a clear strategy to fix it. You keep your domain, your content (if it's working), and your SEO equity. We just make everything perform better."
+      question: 'Do I need to write all the text and content myself?',
+      answer: "Not at all. If you have text and photos ready, that's great. If not, we can write simple, compelling text for your services and provide professional imagery so your business looks credible from day one."
     },
     {
-      question: 'Do you work with small businesses or only large companies?',
-      answer: "We work with ambitious businesses of all sizes. What matters to us is that you're serious about growth, not your company size."
+      question: 'Will my website look great and load fast on mobile phones?',
+      answer: 'Yes, 100%. Over 70% of your customers will visit using their smartphones. We optimize every page so it loads in under 2 seconds on mobile and makes calling or messaging your business as easy as a single tap.'
     },
     {
-      question: 'What do you need from me to get started?',
-      answer: 'We simply need an overview of your business, your design preferences, and your ready-to-go text and images. If you need help purchasing a domain and hosting, we can handle that too. Once those pieces are in place, we start building right away!'
+      question: 'Can you redesign or fix my existing website?',
+      answer: 'Yes! We regularly take slow or outdated websites and transform them into modern, professional sales channels. You keep your domain name, existing business emails, and Google search ranking.'
+    },
+    {
+      question: 'What do I need to get started?',
+      answer: 'Just reach out to us! You do not need to know any technical details. Tell us about your business, the services you provide, and your goals. We handle domain setup, hosting, design, and launch.'
     }
   ]
 
@@ -33,26 +37,26 @@ export const FAQ: React.FC = () => {
   }
 
   return (
-    <section id="faq" className="py-24 bg-[#FAFAFA] relative">
+    <section id="faq" className="py-24 bg-[#EEEBFF] relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#EAEAEA] shadow-sm text-xs font-semibold text-[#01283C] mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#01283C]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DDD4F5] shadow-sm text-xs font-semibold text-[#130B2B] mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#6754E9]" />
             <span>Frequently Asked Questions</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#083247] tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-bold text-[#130B2B] tracking-tight">
             <TextCascade
               segments={[
                 { text: 'Common' },
-                { text: 'questions.', className: 'text-[#737373] font-normal' },
+                { text: 'questions.', className: 'text-[#5B5370] font-normal' },
               ]}
             />
           </h2>
-          <p className="text-[#737373] text-sm sm:text-base max-w-xl mt-3 leading-relaxed">
+          <p className="text-[#5B5370] text-sm sm:text-base max-w-xl mt-3 leading-relaxed">
             Still have questions?{' '}
-            <a href="#contact" className="font-semibold text-[#083247] hover:underline underline-offset-2">
+            <a href="#contact" className="font-semibold text-[#6754E9] hover:underline underline-offset-2">
               Book a free call
             </a>{' '}
             - we&apos;ll answer everything.
@@ -66,22 +70,22 @@ export const FAQ: React.FC = () => {
             return (
               <div
                 key={idx}
-                className={`ordina-card rounded-2xl transition-all duration-200 overflow-hidden ${
-                  isOpen ? 'border-[#01283C]/20 shadow-md' : ''
+                className={`ordina-card rounded-2xl transition-all duration-200 overflow-hidden bg-white border ${
+                  isOpen ? 'border-[#6754E9]/40 shadow-md' : 'border-[#DDD4F5]'
                 }`}
               >
                 <button
                   onClick={() => toggleFAQ(idx)}
                   className="w-full p-6 flex items-center justify-between gap-4 text-left transition-colors cursor-pointer"
                 >
-                  <span className="text-sm sm:text-base font-bold text-[#083247] leading-snug">
+                  <span className="text-sm sm:text-base font-bold text-[#130B2B] leading-snug">
                     {faq.question}
                   </span>
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all ${
                       isOpen
-                        ? 'bg-[#01283C] text-[#CBFF97]'
-                        : 'bg-[#FAFAFA] border border-[#EAEAEA] text-[#01283C]'
+                        ? 'bg-[#6754E9] text-white'
+                        : 'bg-[#F8F6FF] border border-[#DDD4F5] text-[#130B2B]'
                     }`}
                   >
                     {isOpen ? (
@@ -93,7 +97,7 @@ export const FAQ: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-[#737373] text-xs sm:text-sm leading-relaxed border-t border-[#F0F0F0] animate-fadeIn">
+                  <div className="px-6 pb-6 pt-1 text-[#5B5370] text-xs sm:text-sm leading-relaxed border-t border-[#DDD4F5] animate-fadeIn">
                     {faq.answer}
                   </div>
                 )}

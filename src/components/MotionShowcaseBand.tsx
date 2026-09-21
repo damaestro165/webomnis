@@ -49,22 +49,22 @@ const integrations = [
 export const MotionShowcaseBand: React.FC = () => {
   const repeatedShowcase = [...showcaseItems, ...showcaseItems]
   return (
-    <section className="relative overflow-hidden bg-white py-16 border-y border-[#EAEAEA]">
-      <div className="absolute left-0 top-0 bottom-0 w-28 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-28 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+    <section className="relative overflow-hidden bg-[#EEEBFF] py-16 border-y border-[#DDD4F5]">
+      <div className="absolute left-0 top-0 bottom-0 w-28 bg-gradient-to-r from-[#EEEBFF] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-28 bg-gradient-to-l from-[#EEEBFF] to-transparent z-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <div>
             <div className="ordina-pill mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#01283C]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#6754E9]" />
               Moving delivery system
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold text-[#083247] tracking-tight max-w-3xl">
+            <h2 className="text-3xl sm:text-5xl font-bold text-[#130B2B] tracking-tight max-w-3xl">
               <TextCascade
                 segments={[
                   { text: 'Work, metrics, and tools' },
-                  { text: 'moving as one system.', className: 'text-[#737373] font-normal', breakBefore: true },
+                  { text: 'moving as one system.', className: 'text-[#5B5370] font-normal', breakBefore: true },
                 ]}
               />
             </h2>
@@ -73,7 +73,7 @@ export const MotionShowcaseBand: React.FC = () => {
             {integrations.slice(0, 6).map((tool) => (
               <span
                 key={tool}
-                className="rounded-full border border-[#EAEAEA] bg-[#FAFAFA] px-3.5 py-1.5 text-[11px] font-bold text-[#083247]"
+                className="rounded-full border border-[#DDD4F5] bg-white px-3.5 py-1.5 text-[11px] font-bold text-[#130B2B]"
               >
                 {tool}
               </span>
@@ -89,7 +89,7 @@ export const MotionShowcaseBand: React.FC = () => {
           return (
             <article
               key={`${item.title}-${index}`}
-              className="moving-showcase-card ordina-card rounded-2xl overflow-hidden group"
+              className="moving-showcase-card ordina-card rounded-2xl overflow-hidden group bg-white border border-[#DDD4F5]"
             >
               <div className="relative h-44 overflow-hidden">
                 <img
@@ -97,22 +97,22 @@ export const MotionShowcaseBand: React.FC = () => {
                   alt=""
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#01283C]/85 via-[#01283C]/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#130B2B]/85 via-[#130B2B]/25 to-transparent" />
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                  <span className="px-3 py-1 rounded-full bg-[#CBFF97] text-[#01283C] text-[11px] font-bold">
+                  <span className="px-3 py-1 rounded-full bg-[#6754E9] text-white text-[11px] font-bold">
                     {item.metric}
                   </span>
-                  <span className="w-9 h-9 rounded-full bg-white/20 border border-white/20 backdrop-blur-md text-white flex items-center justify-center group-hover:bg-white group-hover:text-[#01283C] transition-all">
+                  <span className="w-9 h-9 rounded-full bg-white/20 border border-white/20 backdrop-blur-md text-white flex items-center justify-center group-hover:bg-white group-hover:text-[#130B2B] transition-all">
                     <ArrowUpRight className="w-4 h-4" />
                   </span>
                 </div>
               </div>
               <div className="p-5">
-                <div className="flex items-center gap-2 text-[11px] font-bold uppercase text-[#737373] mb-2">
-                  <Icon className="w-3.5 h-3.5 text-[#01283C]" />
+                <div className="flex items-center gap-2 text-[11px] font-bold uppercase text-[#5B5370] mb-2">
+                  <Icon className="w-3.5 h-3.5 text-[#6754E9]" />
                   {item.label}
                 </div>
-                <h3 className="text-base font-bold text-[#083247]">{item.title}</h3>
+                <h3 className="text-base font-bold text-[#130B2B]">{item.title}</h3>
               </div>
             </article>
           )

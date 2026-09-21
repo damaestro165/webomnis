@@ -25,7 +25,7 @@ export function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] text-[#083247] flex flex-col antialiased selection:bg-[#01283C] selection:text-[#CBFF97]">
+    <div className="min-h-screen bg-[#EEEBFF] text-[#130B2B] flex flex-col antialiased selection:bg-[#6754E9] selection:text-white">
       {/* Navigation Bar */}
       <Navbar onOpenConsultation={scrollToContact} />
 
@@ -59,10 +59,10 @@ export function App() {
           <WhyChooseUs />
         </Reveal>
 
-        {/* 7. Selected Work (Toserah, Plusmed, Eyomoa Farms) */}
-        <Reveal>
+        {/* 7. Selected Work (Toserah, Plusmed, Eyomoa Farms) - Commented out for now */}
+        {/* <Reveal>
           <WorkShowcase />
-        </Reveal>
+        </Reveal> */}
 
         {/* 8. Moving Showcase Band (Positioned lower after Work Showcase) */}
         {/* <Reveal>

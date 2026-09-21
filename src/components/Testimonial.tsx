@@ -31,24 +31,24 @@ export const Testimonial: React.FC = () => {
   ]
 
   return (
-    <section id="reviews" className="py-24 bg-[#FAFAFA] relative overflow-hidden">
+    <section id="reviews" className="py-24 bg-[#ffff] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#EAEAEA] shadow-sm text-xs font-semibold text-[#01283C] mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#01283C]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DDD4F5] shadow-sm text-xs font-semibold text-[#130B2B] mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#6754E9]" />
             <span>Client Feedback</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#083247] tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-bold text-[#130B2B] tracking-tight">
             <TextCascade
               segments={[
                 { text: 'What our clients' },
-                { text: 'say about us.', className: 'text-[#737373] font-normal' },
+                { text: 'say about us.', className: 'text-[#5B5370] font-normal' },
               ]}
             />
           </h2>
-          <p className="text-[#737373] text-sm sm:text-base max-w-2xl mt-3 leading-relaxed">
+          <p className="text-[#5B5370] text-sm sm:text-base max-w-2xl mt-3 leading-relaxed">
             Hear how our conversion-focused architecture and rapid execution delivered measurable growth for ambitious brands.
           </p>
         </div>
@@ -58,37 +58,37 @@ export const Testimonial: React.FC = () => {
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="ordina-card reveal-stagger-card rounded-3xl p-8 flex flex-col justify-between group"
+              className="ordina-card reveal-stagger-card rounded-3xl p-8 flex flex-col justify-between group bg-white border border-[#DDD4F5]"
               style={{ transitionDelay: `${idx * 90}ms` }}
             >
               <div>
                 {/* Result Pill Badge */}
-                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#01283C] bg-[#FAFAFA] px-3 py-1 rounded-full border border-[#EAEAEA] mb-6">
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#130B2B] bg-[#F8F6FF] px-3 py-1 rounded-full border border-[#DDD4F5] mb-6">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                   <span>{t.result}</span>
                 </div>
 
                 {/* 5 Stars */}
-                <div className="flex items-center gap-1 text-[#01283C] mb-5">
+                <div className="flex items-center gap-1 text-amber-400 mb-5">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-[#01283C]" />
+                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
                   ))}
                 </div>
 
                 {/* Quote Text */}
-                <p className="text-[#737373] text-sm sm:text-base leading-relaxed mb-8">
+                <p className="text-[#5B5370] text-sm sm:text-base leading-relaxed mb-8">
                   &ldquo;{t.text}&rdquo;
                 </p>
               </div>
 
               {/* Author Info */}
-              <div className="pt-6 border-t border-[#F0F0F0] flex items-center gap-3.5">
-                <div className="w-10 h-10 rounded-full bg-[#01283C] text-[#CBFF97] font-bold text-xs flex items-center justify-center shadow-sm">
+              <div className="pt-6 border-t border-[#DDD4F5] flex items-center gap-3.5">
+                <div className="w-10 h-10 rounded-full bg-[#6754E9] text-white font-bold text-xs flex items-center justify-center shadow-sm">
                   {t.avatar}
                 </div>
                 <div>
-                  <div className="font-bold text-[#083247] text-sm">{t.name}</div>
-                  <div className="text-xs text-slate-500 font-medium">
+                  <div className="font-bold text-[#130B2B] text-sm">{t.name}</div>
+                  <div className="text-xs text-[#5B5370] font-medium">
                     {t.role} / {t.company}
                   </div>
                 </div>
