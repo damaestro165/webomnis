@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://webomnis.com/sitemap.xml

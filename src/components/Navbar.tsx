@@ -49,13 +49,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
       {/* Main Navigation */}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
         {/* Brand Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl bg-[#6754E9] text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
-            <span className="text-base font-black">W</span>
-          </div>
-          <span className="text-xl font-bold tracking-tight text-[#130B2B] flex items-center">
-            WebOmnis
-          </span>
+        <a href="#" className="flex items-center group">
+          <img 
+            src="/logo.png" 
+            alt="WebOmnis Logo" 
+            className="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+          />
         </a>
 
         {/* Desktop Links */}

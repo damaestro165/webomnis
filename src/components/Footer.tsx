@@ -100,13 +100,12 @@ export const Footer: React.FC = () => {
           
           {/* Brand Col */}
           <div className="col-span-2">
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-[#6754E9] flex items-center justify-center text-white font-bold">
-                <span className="text-base font-black">W</span>
-              </div>
-              <span className="text-lg font-bold text-[#130B2B] tracking-tight">
-                WebOmnis
-              </span>
+            <div className="flex items-center mb-4">
+              <img 
+                src="/logo.png" 
+                alt="WebOmnis Logo" 
+                className="h-8 w-auto object-contain" 
+              />
             </div>
             <p className="text-[#5B5370] text-xs sm:text-sm max-w-sm leading-relaxed mb-6">
               We build fast, beautiful websites and online stores that turn visitors into phone calls, appointments, and paying customers.

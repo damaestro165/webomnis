@@ -27,6 +27,10 @@ export const FAQ: React.FC = () => {
       answer: 'Yes! We regularly take slow or outdated websites and transform them into modern, professional sales channels. You keep your domain name, existing business emails, and Google search ranking.'
     },
     {
+      question: 'Do you work with businesses in Nigeria and internationally?',
+      answer: 'Yes! We are based in Lagos, Nigeria, and build high-performance websites for clients across Nigeria (Lagos, Abuja, Port Harcourt) and worldwide across the US, UK, Canada, and Europe. We support local and global payment gateways (Paystack, Flutterwave, Stripe) and work seamlessly across time zones.'
+    },
+    {
       question: 'What do I need to get started?',
       answer: 'Just reach out to us! You do not need to know any technical details. Tell us about your business, the services you provide, and your goals. We handle domain setup, hosting, design, and launch.'
     }
