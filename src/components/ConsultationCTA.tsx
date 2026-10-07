@@ -184,7 +184,7 @@ export const ConsultationCTA: React.FC = () => {
         <div className="mt-12 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-purple-200/70 font-medium">
           <span>Email: <a href="mailto:hello@webomnis.com" className="text-white hover:underline font-bold">hello@webomnis.com</a></span>
           <span className="h-1 w-1 rounded-full bg-white/30" />
-          <span>Phone / WhatsApp: <a href="tel:+2348021173032" className="text-white hover:underline font-bold">+234-802-117-3032</a></span>
+          <span>Phone / WhatsApp: <a href="https://wa.me/message/JCWKMMI2VZ5IO1" target="_blank" rel="noopener noreferrer" className="text-white hover:underline font-bold">+234-802-117-3032</a></span>
           <span className="h-1 w-1 rounded-full bg-white/30" />
           <span>Response: <strong className="text-[#C4B5FD]">Within 24 hours</strong></span>
         </div>

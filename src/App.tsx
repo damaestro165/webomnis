@@ -15,6 +15,7 @@ import { Process } from './components/Process'
 import { ConsultationCTA } from './components/ConsultationCTA'
 import { Footer } from './components/Footer'
 import { Reveal } from './components/Reveal'
+import { WhatsAppButton } from './components/WhatsAppButton'
 
 export function App() {
   const scrollToContact = () => {
@@ -97,6 +98,9 @@ export function App() {
 
       {/* Agency Footer with Global Offices and Sitemap */}
       <Footer />
+
+      {/* Floating WhatsApp Action Button */}
+      <WhatsAppButton />
     </div>
   )
 }
